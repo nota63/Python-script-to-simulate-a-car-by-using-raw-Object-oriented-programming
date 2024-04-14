@@ -1,0 +1,92 @@
+# pytohn script to simulate a car by pure Object Oriented programmming
+
+
+class Vehicle():
+      def __init__(self, car , color , year):
+          self.car = car
+          self.color = color
+          self.year = year
+          self.is_running = False
+
+
+      def start(self):
+         if not self.is_running:
+             print(f" Starting...{self.car} {self.color} {self.year}  engine Started!!")
+             self.is_running = True
+         else:
+             print("Car is already started!")
+
+      def drive(self):
+         if self.is_running:
+           print(f" first gear engaged now the {self.car} {self.color} {self.year} is moving...")
+         else:
+             print("please Start the engine first to drive the car!")
+
+      def engine_off(self):
+         if self.is_running:
+           print("Car's engine off successs")
+         else:
+              print(f"the engine of {self.car} {self.color} {self.year} is already off")
+
+      def blow_horn(self):
+          if not self.is_running:
+             print("Start the engine to blow horn")
+             self.is_running = True
+          else:
+              print("Beep Beeep !!!!")
+
+      def Headlights_on(self):
+          if self.is_running:
+             print(f"Headlights of {self.car} {self.color} {self.year} is now on🌠")
+          else:
+              print(f"Please start the {self.car} {self.color} {self.year} To on headlights!")
+
+      def fuel_check(self):
+          if self.is_running:
+             print(f" 3 litres f fuel remained in {self.car} {self.color} {self.year}" )
+          else:
+              print("Start the engine to check fuel")
+
+
+      def navigation(self):
+          if self.is_running:
+             print("Navigation has been started Happy journey ")
+          else:
+              print("Start the engine to navigate ")
+
+
+      def wish_me(self):
+          if not self.is_running:
+             print("Start the engine to aquire wish frome car")
+             self.is_running = True
+          else:
+             print(f" {self.car} {self.year} {self.color}:   Welcome My dear User😊\nand Happy Journey!\nand Have a good day🥰" )
+
+# creating instances for the car
+
+car= Vehicle('tesla Model X',  'Red', 2023  )
+car2= Vehicle('Mercedees EQS', 'black', 2022)
+car3= Vehicle('BMW M3', 'Blue', 2018)
+
+my_car= Vehicle('Tata Safari', 'Black', 2020)
+my_car2= Vehicle('Skoda Slavia', 'White', 2024)
+
+s="YOU CAN USE FOLLOWING COMMANDS TO SIMULATE THE CAR"
+print(s.center(50,","))
+
+s={''' 1. Start
+        2. Drive
+        3. Engine_off
+        4. blow_horn
+        5.Headlights_on
+        6.fuel_check
+        7.navigation
+        8.wish_me'''}
+print(s)
+
+print("Note: Dont forget to start the car first before perform any action ! Because Car wont  perform any ation without startng the engine of the car")
+
+car.start()
+car.wish_me()
+
+
